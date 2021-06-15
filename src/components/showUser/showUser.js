@@ -43,13 +43,13 @@ export default function Show() {
   const [usersList, setUserList] = useState([])
 
   const deleteUser = (id) => {
-    axios.delete(`https://assignmentforinternbackend.herokuapp.com/users/${id}`).then( () => {
+    axios.delete(`https://assignmentforinternbackend.herokuapp.com/${id}`).then( () => {
       window.location.reload(false);
     })
   }
 
   useEffect(() => {
-      axios.get('https://assignmentforinternbackend.herokuapp.com/users').then( (allUsers) => {
+      axios.get('https://assignmentforinternbackend.herokuapp.com').then( (allUsers) => {
           setUserList(allUsers.data);
       } )
   }, [])
