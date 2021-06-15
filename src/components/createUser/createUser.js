@@ -26,7 +26,7 @@ export default function Create() {
 
   const createUsers = () => {
     console.log("hi");
-      axios.post('https://assignmentforinternbackend.herokuapp.com', user).then( (val) => {
+      axios.post('https://assignmentforinternbackend.herokuapp.com/users/create', user).then( (val) => {
         console.log(val);
         console.log(val.body);
         window.location.reload(false);
